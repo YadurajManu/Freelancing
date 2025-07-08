@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @State private var navigateToOnboarding = false
+    
     var body: some View {
         GeometryReader { geometry in
             ZStack {
@@ -41,8 +43,12 @@ struct WelcomeView: View {
                     Spacer()
                     
                     // Get Started Button
+                    NavigationLink(destination: OnboardingView(), isActive: $navigateToOnboarding) {
+                        EmptyView()
+                    }
+                    
                     GradientButton(title: "Get Started") {
-                        // Action for Get Started
+                        navigateToOnboarding = true
                     }
                     .padding(.bottom, 50)
                 }
