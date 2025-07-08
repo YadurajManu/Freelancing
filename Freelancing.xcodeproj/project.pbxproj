@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		900ACCDC2E1C94D200FFE3EC /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 900ACCDB2E1C94D200FFE3EC /* Lottie */; };
+		900ACCF72E1C9E6200FFE3EC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 900ACCF62E1C9E6200FFE3EC /* GoogleSignIn */; };
+		900ACCF92E1C9E6200FFE3EC /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 900ACCF82E1C9E6200FFE3EC /* GoogleSignInSwift */; };
+		900ACCFC2E1C9F9500FFE3EC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 900ACCFB2E1C9F9500FFE3EC /* FirebaseAnalytics */; };
+		900ACCFE2E1C9F9500FFE3EC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 900ACCFD2E1C9F9500FFE3EC /* FirebaseAuth */; };
+		900ACD002E1C9F9500FFE3EC /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 900ACCFF2E1C9F9500FFE3EC /* FirebaseCore */; };
+		900ACD022E1C9F9500FFE3EC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 900ACD012E1C9F9500FFE3EC /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +39,22 @@
 		908302D12E1C09EB00985709 /* FreelancingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FreelancingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		900ACD0E2E1CA39D00FFE3EC /* Exceptions for "Freelancing" folder in "Freelancing" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 908302B92E1C09EA00985709 /* Freelancing */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		908302BC2E1C09EA00985709 /* Freelancing */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				900ACD0E2E1CA39D00FFE3EC /* Exceptions for "Freelancing" folder in "Freelancing" target */,
+			);
 			path = Freelancing;
 			sourceTree = "<group>";
 		};
@@ -56,7 +75,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				900ACCF92E1C9E6200FFE3EC /* GoogleSignInSwift in Frameworks */,
+				900ACCFE2E1C9F9500FFE3EC /* FirebaseAuth in Frameworks */,
 				900ACCDC2E1C94D200FFE3EC /* Lottie in Frameworks */,
+				900ACCFC2E1C9F9500FFE3EC /* FirebaseAnalytics in Frameworks */,
+				900ACD002E1C9F9500FFE3EC /* FirebaseCore in Frameworks */,
+				900ACCF72E1C9E6200FFE3EC /* GoogleSignIn in Frameworks */,
+				900ACD022E1C9F9500FFE3EC /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +143,12 @@
 			name = Freelancing;
 			packageProductDependencies = (
 				900ACCDB2E1C94D200FFE3EC /* Lottie */,
+				900ACCF62E1C9E6200FFE3EC /* GoogleSignIn */,
+				900ACCF82E1C9E6200FFE3EC /* GoogleSignInSwift */,
+				900ACCFB2E1C9F9500FFE3EC /* FirebaseAnalytics */,
+				900ACCFD2E1C9F9500FFE3EC /* FirebaseAuth */,
+				900ACCFF2E1C9F9500FFE3EC /* FirebaseCore */,
+				900ACD012E1C9F9500FFE3EC /* FirebaseFirestore */,
 			);
 			productName = Freelancing;
 			productReference = 908302BA2E1C09EA00985709 /* Freelancing.app */;
@@ -203,6 +234,8 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				900ACCDA2E1C94D200FFE3EC /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				900ACCF52E1C9E6200FFE3EC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				900ACCFA2E1C9F9500FFE3EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 908302BB2E1C09EA00985709 /* Products */;
@@ -404,11 +437,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Freelancing/Freelancing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 428T9SP6S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Freelancing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -432,11 +467,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Freelancing/Freelancing.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 428T9SP6S4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Freelancing/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -577,6 +614,22 @@
 				minimumVersion = 4.5.2;
 			};
 		};
+		900ACCF52E1C9E6200FFE3EC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+		900ACCFA2E1C9F9500FFE3EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.15.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -584,6 +637,36 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 900ACCDA2E1C94D200FFE3EC /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		900ACCF62E1C9E6200FFE3EC /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900ACCF52E1C9E6200FFE3EC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		900ACCF82E1C9E6200FFE3EC /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900ACCF52E1C9E6200FFE3EC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		900ACCFB2E1C9F9500FFE3EC /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900ACCFA2E1C9F9500FFE3EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		900ACCFD2E1C9F9500FFE3EC /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900ACCFA2E1C9F9500FFE3EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		900ACCFF2E1C9F9500FFE3EC /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900ACCFA2E1C9F9500FFE3EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		900ACD012E1C9F9500FFE3EC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 900ACCFA2E1C9F9500FFE3EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

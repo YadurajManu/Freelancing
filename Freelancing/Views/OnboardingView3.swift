@@ -70,8 +70,11 @@ struct OnboardingView3: View {
                     HStack {
                         Spacer()
                         
+                        NavigationLink(destination: RegistrationView(), isActive: $navigateToNext) {
+                            EmptyView()
+                        }
+                        
                         CircularButton(icon: "chevron.right") {
-                            // Navigate to next screen (to be implemented)
                             navigateToNext = true
                         }
                         .padding(.trailing, 30)

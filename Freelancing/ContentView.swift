@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var authService: AuthenticationService
+    
     var body: some View {
         NavigationView {
-            WelcomeView()
+            if authService.user != nil {
+                HomeView()
+            } else {
+                WelcomeView()
+            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
