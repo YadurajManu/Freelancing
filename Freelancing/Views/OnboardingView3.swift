@@ -1,5 +1,5 @@
 //
-//  OnboardingView2.swift
+//  OnboardingView3.swift
 //  Freelancing
 //
 //  Created by Yaduraj Singh on 07/07/25.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Lottie
 
-struct OnboardingView2: View {
+struct OnboardingView3: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var navigateToNext = false
     
@@ -27,9 +27,10 @@ struct OnboardingView2: View {
                         endPoint: UnitPoint(x: -0.24, y: -0.31)
                     )
                     
-                    // Lottie animation - man showing muscles
-                    LottieView(animation: .named("man-showing-muscles"))
-                        .playing(loopMode: .loop)
+                    // Wife serving food image
+                    Image("wifeservingfood")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                         .frame(width: 350, height: 350)
                 }
                 .frame(height: geometry.size.height * 0.55)
@@ -49,13 +50,13 @@ struct OnboardingView2: View {
                     // Content section
                     VStack(spacing: 20) {
                         // Title
-                        Text("Get Burn")
+                        Text("Eat Well")
                             .font(Font.custom("Poppins", size: 28).weight(.bold))
                             .foregroundColor(.black)
                             .multilineTextAlignment(.center)
                         
                         // Description
-                        Text("Let's keep burning, to achieve yours goals, it hurts only temporarily, if you give up now you will be in pain forever")
+                        Text("Let's start a healthy lifestyle with us, we can determine your diet every day. healthy eating is fun")
                             .font(Font.custom("Poppins", size: 14).weight(.regular))
                             .foregroundColor(Color.gray.opacity(0.7))
                             .multilineTextAlignment(.center)
@@ -69,11 +70,8 @@ struct OnboardingView2: View {
                     HStack {
                         Spacer()
                         
-                        NavigationLink(destination: OnboardingView3(), isActive: $navigateToNext) {
-                            EmptyView()
-                        }
-                        
                         CircularButton(icon: "chevron.right") {
+                            // Navigate to next screen (to be implemented)
                             navigateToNext = true
                         }
                         .padding(.trailing, 30)
@@ -90,5 +88,5 @@ struct OnboardingView2: View {
 }
 
 #Preview {
-    OnboardingView2()
+    OnboardingView3()
 } 
